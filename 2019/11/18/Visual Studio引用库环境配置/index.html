@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Jlan_Blog</title>
+  <title>Visual Studio引用库环境配置 | Jlan_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jlan_Blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+  <meta name="description" content="C++引用库文件，对vs的工程环境进行配置">
+<meta name="keywords" content="C++,环境配置,引用库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Visual Studio引用库环境配置">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;18&#x2F;Visual%20Studio%E5%BC%95%E7%94%A8%E5%BA%93%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE&#x2F;index.html">
 <meta property="og:site_name" content="Jlan_Blog">
+<meta property="og:description" content="C++引用库文件，对vs的工程环境进行配置">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-19T02:37:59.083Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Jlan_Blog" type="application/atom+xml">
@@ -149,21 +153,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Visual Studio引用库环境配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Visual Studio引用库环境配置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/18/Visual%20Studio%E5%BC%95%E7%94%A8%E5%BA%93%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Visual Studio引用库环境配置</a>
+    <h1 class="article-title" itemprop="name">
+      Visual Studio引用库环境配置
     </h1>
   
 
         <!--显示阅读次数-->
         
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" target="_blank" rel="noopener" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+                    阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+          
         
         <a href="/2019/11/18/Visual%20Studio%E5%BC%95%E7%94%A8%E5%BA%93%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="archive-article-date">
   	<time datetime="2019-11-18T02:32:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-18</time>
@@ -174,11 +184,38 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在Visual Studio的环境下进行C++编程，有时需要引用外部静态库（.lib文件）。此时须要在vs工程环境下配置工程属性，以下为具体步骤。</p>
-        
-          <a class="article-more-a" href="/2019/11/18/Visual%20Studio%E5%BC%95%E7%94%A8%E5%BA%93%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/#more">more >></a>
-        
+<a id="more"></a>
+<h1 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h1><ol>
+<li>点击属性管理器，右键选择工程项目，选择属性；</li>
+<li>进入属性页后，在配置属性-&gt;连接器-&gt;输入-&gt;附加依赖项下编辑输入所引用库的名称；</li>
+<li>在VC++目录-&gt;库目录浏览选择引用库所在的文件目录；</li>
+<li>在VC++目录-&gt;包含目录下选择引用库头文件（.h）所在的目录，在该头文件中包含了引用库中所有类、函数、变量等的声明。</li>
+<li>完成上上述属性配置后，在源文件中（.c）引入库头文件（#include xxx.h）,然后便可引用库中定义的类、函数、变量等。</li>
+</ol>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -225,16 +262,65 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/18/Visual%20Studio%E5%BC%95%E7%94%A8%E5%BA%93%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/18/Visual%20Studio%E5%BC%95%E7%94%A8%E5%BA%93%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -249,13 +335,32 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#具体步骤"><span class="toc-number">2.</span> <span class="toc-text">具体步骤</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -285,8 +390,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
